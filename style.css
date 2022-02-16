@@ -1,0 +1,81 @@
+body{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 600vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+  'intro'
+  'skill'
+  'project'
+  'article'
+  'ux'
+  'contact';
+}
+header{
+  height: 75px;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  border-bottom: solid;
+
+}
+footer{
+  height: 75px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  border-top: solid;
+}
+.intro{
+
+  grid-area: intro;
+}
+.skill{
+  background: teal;
+  grid-area: skill;
+}
+.project{
+  background: yellow;
+  grid-area: project;
+}
+.article{
+  background: green;
+  grid-area: article;
+}
+.ux{
+  background: violet;
+  grid-area: ux;
+}
+.contact{
+  background: khaki;
+  grid-area: contact;
+}
+.logo{
+  position: absolute;
+  left: 15px;
+  background: orange;
+  width: 75px;
+  top: 32px;
+}
+.name01{
+position: absolute;
+left: 95px;
+top:27px;
+font-size: 25px;
+font-family: Roboto, sans-serif;
+font-weight: 600;
+}
+.nav01{
+  position: absolute;
+  right: 25px;
+}
+.ul01{
+  text-align: center;
+  text-decoration: none;
+}
