@@ -1,3 +1,6 @@
+/* The body is split into sections of that being (intro or landing),
+(skill), (project), (article), (ux), (contact). */
+
 body{
   padding: 0;
   margin: 0;
@@ -15,6 +18,12 @@ body{
   'ux'
   'contact';
 }
+
+/* header & footer
+
+
+
+*/
 header{
   height: 75px;
   width: 100%;
@@ -32,25 +41,67 @@ footer{
   background-color: red;
   border-top: solid;
 }
-.intro{
 
+/*body division
+
+
+*/
+.intro{
   grid-area: intro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .skill{
-  background: teal;
   grid-area: skill;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+  'sk02 . . . .'
+  '. sk03 sk03 sk03 .'
+  '. sk03 sk03 sk03 .'
+  'sk01 sk01 sk01 sk01 sk01'
+  'sk01 sk01 sk01 sk01 sk01'
+  ;
 }
 .project{
-  background: yellow;
   grid-area: project;
+  display: grid;
+  grid-template-columns: 1fr .1fr 1fr .1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+  'pr01 . . . .'
+  '. . . . .'
+  'pr02 . pr03 . pr04'
+  'pr02 . pr03 . pr04'
+  'pr02 . pr03 . pr04'
 }
 .article{
   background: green;
   grid-area: article;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
 }
 .ux{
   background: violet;
   grid-area: ux;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
+  '. . . . .'
 }
 .contact{
   background: khaki;
@@ -59,13 +110,12 @@ footer{
 .logo{
   position: absolute;
   left: 15px;
-  background: orange;
   width: 75px;
-  top: 32px;
+  top: 3px;
 }
 .name01{
 position: absolute;
-left: 95px;
+left: 100px;
 top:27px;
 font-size: 25px;
 font-family: Roboto, sans-serif;
@@ -82,5 +132,141 @@ li{
   display: inline;
   padding: 20px;
   font-size: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 
+}
+.jp01{
+  height: 70px;
+}
+h1{
+  font-family: Roboto, sans-serif;
+  letter-spacing: .5px;
+  line-height: 1.15em;
+  font-size: 3em;
+  text-align: center;
+}
+.skill01{
+  grid-area: sk01;
+  padding-bottom: 10px;
+  border: solid;
+  border-radius: 15px;
+  margin: 1em;
+  padding: .5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr 25px);
+  grid-template-areas:
+  'i01 i02 i03 i04'
+  '. . . .'
+  'i05 i06 i07 i08'
+  '. . . .';
+}
+.skill03{
+  grid-area: sk03;
+  border: solid;
+  border-radius: 25px;
+
+}
+.red{
+  background: rgb(69,43,164);
+background: linear-gradient(90deg, rgba(69,43,164,1) 0%, rgba(60,46,114,1) 36%, rgba(167,49,133,1) 100%);-webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;}
+ .contact02{
+   background: rgb(69,43,164);
+background: linear-gradient(90deg, rgba(69,43,164,1) 0%, rgba(60,46,114,1) 36%, rgba(167,49,133,1) 100%);-webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;}
+ button{
+   width: 45.5em;
+   height:7.50em;
+   color: white;
+   background: rgb(69,43,164);
+background: linear-gradient(90deg, rgba(69,43,164,1) 0%, rgba(60,46,114,1) 36%, rgba(167,49,133,1) 100%);
+   border: solid;
+   border-radius: 25px;
+   font-family: Roboto, Sanserif
+   font-weight: bold;
+   justify-content: center;
+ }
+ button:hover{
+   transform: scale(1.1);
+   transition-duration: 2s;
+ }
+ .buttonsp{
+   font-size: 20px;
+   font-family: Roboto, sans-serif;
+   letter-spacing: 1px;
+ }
+ /* Skills page css c
+
+
+ */
+
+ .skill02{
+   grid-area: sk02;
+   display: flex;
+   justify-content: center;
+ }
+ h2{
+   font-size: 2.5em;
+   font-family: Roboto, sans-serif;
+   font-weight: 400;
+ }
+ img{
+   height: 100px;
+   align-items: center;
+ }
+ .fl01{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+ }
+
+.img01{
+  grid-area: i01;
+}
+.img02{
+  grid-area:i02;
+}
+.img03{
+  grid-area:i03;
+}
+.img04{
+  grid-area:i04;
+}
+.img05{
+  grid-area:i05;
+}
+.img06{
+  grid-area:i06;
+}
+.img07{
+  grid-area:i07;
+
+}
+.img08{
+  grid-area:i08;
+}
+.pr01{
+  grid-area: pr01;
+  display: flex;
+  justify-content: center;
+}
+.pr02{
+  grid-area: pr02;
+  border: solid;
+  margin: 1em;
+  border-radius: 15px;
+}
+.pr03{
+  grid-area: pr03;
+  border: solid;
+  margin: 1em;
+  border-radius: 15px;
+}
+.pr04{
+  grid-area: pr04;
+  border: solid;
+  margin: 1em;
+  border-radius: 15px;
 }
